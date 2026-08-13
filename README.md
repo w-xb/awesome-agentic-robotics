@@ -193,6 +193,7 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 
 ### 2026
 
+- \[2026.7] ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts [paper](https://arxiv.org/abs/2607.28993) [project](https://thu-wangmx.github.io/st-wam/) [code](https://github.com/Thu-WangMX/ST-WAM-Semantic-Temporal-World-Action-Model)
 - \[2026.6] MemoryWAM: Efficient World Action Modeling with Persistent Memory [paper](https://arxiv.org/abs/2606.20562)
 - \[2026.6] NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation [paper](https://arxiv.org/abs/2606.13494)
 - \[2026.6] World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis [paper](https://arxiv.org/abs/2606.05979)
