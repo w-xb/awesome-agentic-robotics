@@ -1,7 +1,7 @@
 # Awesome Agentic Robotics [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <p align="center">
-  <img src="assets/agentic-robotics-banner.svg" width="100%" alt="Awesome Agentic Robotics: planning, memory, tools, verification, and safety for autonomous robots">
+  <img src="assets/agentic-robotics-hero.webp" width="100%" alt="Agentic robotics: an autonomous robot and manipulator connected through a spatial world model">
 </p>
 
 <p align="center">
@@ -14,8 +14,6 @@
 <p align="center">
   A curated survey of physical agents: embodied memory, planning, world/action models, verification, failure recovery, skill use, and safety for autonomous robots.
 </p>
-
-<p align="center"><strong>Curated by Duo Liu and Xinbai Wang</strong></p>
 
 **Last updated:** 2026-08-27
 
