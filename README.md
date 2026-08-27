@@ -1,10 +1,6 @@
 # Awesome Agentic Robotics [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <p align="center">
-  <img src="assets/agentic-robotics-hero.webp" width="100%" alt="Agentic robotics: an autonomous robot and manipulator connected through a spatial world model">
-</p>
-
-<p align="center">
   <a href="#agentic-vla-and-embodied-foundation-models"><img src="https://img.shields.io/badge/Focus-Agentic%20VLA-7c3aed" alt="Focus: Agentic VLA"></a>
   <a href="#start-here--must-read"><img src="https://img.shields.io/badge/Reading-Must%20Read-0891b2" alt="Must Read guide"></a>
   <a href="contributing.md"><img src="https://img.shields.io/badge/PRs-welcome-22c55e" alt="PRs welcome"></a>
@@ -16,7 +12,6 @@
 </p>
 
 **Last updated:** 2026-08-27
-
 
 ## Contents
 
