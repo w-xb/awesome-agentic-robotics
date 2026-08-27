@@ -1,6 +1,21 @@
 # Awesome Agentic Robotics [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated survey of physical agents: embodied memory, planning, world/action models, verification, failure recovery, skill use, and safety for autonomous robots.
+<p align="center">
+  <img src="assets/agentic-robotics-hero.webp" width="100%" alt="Agentic robotics: an autonomous robot and manipulator connected through a spatial world model">
+</p>
+
+<p align="center">
+  <a href="#agentic-vla-and-embodied-foundation-models"><img src="https://img.shields.io/badge/Focus-Agentic%20VLA-7c3aed" alt="Focus: Agentic VLA"></a>
+  <a href="#start-here--must-read"><img src="https://img.shields.io/badge/Reading-Must%20Read-0891b2" alt="Must Read guide"></a>
+  <a href="contributing.md"><img src="https://img.shields.io/badge/PRs-welcome-22c55e" alt="PRs welcome"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0--1.0-2563eb" alt="CC0 1.0 license"></a>
+</p>
+
+<p align="center">
+  A curated survey of physical agents: embodied memory, planning, world/action models, verification, failure recovery, skill use, and safety for autonomous robots.
+</p>
+
+**Last updated:** 2026-08-27
 
 **Last updated:** 2026-08-26
 
@@ -549,7 +564,7 @@ If you find this repository useful, please consider citing this list:
 ```bibtex
 @misc{liu2026awesomeagenticrobotics,
   title = {Awesome Agentic Robotics},
-  author = {Duo Liu},
+  author = {Duo Liu and Xinbai Wang},
   journal = {GitHub repository},
   url = {https://github.com/Cat-blizzard/awesome-agentic-robotics},
   year = {2026},
@@ -564,4 +579,4 @@ Contributions are welcome. Please read [contributing.md](contributing.md) before
 
 ## Contact
 
-Questions, suggestions, and collaborations are welcome. You can reach me at [duoliu@stu.hit.edu.cn](mailto:duoliu@stu.hit.edu.cn).
+Questions, suggestions, and collaborations are welcome. Contact [Duo Liu](mailto:duoliu@stu.hit.edu.cn) or connect with [Xinbai Wang](https://github.com/w-xb) on GitHub.
