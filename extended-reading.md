@@ -1,6 +1,6 @@
 # Extended Reading
 
-This archive preserves papers and resources removed from the main README during the strict 100-paper curation pass on 2026-08-27. Entries remain grouped by their former canonical topic and retain their original official links.
+This archive preserves papers and resources moved out of the main README during the 2026-08-27 curation pass. Entries remain grouped by their former canonical topic and retain their original official links.
 
 > Inclusion here does not imply low research quality. These works are adjacent, narrower, more incremental, less directly agentic, or less established under the main list's current selection criteria.
 

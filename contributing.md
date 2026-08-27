@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve Awesome Agentic Robotics. The main README is intentionally limited to 100 high-signal papers; broader but relevant work belongs in [extended-reading.md](extended-reading.md).
+Thanks for helping improve Awesome Agentic Robotics. The main README is a selective, evolving list of high-signal work; broader but relevant work belongs in [extended-reading.md](extended-reading.md).
 
 ## Scope
 
@@ -29,7 +29,7 @@ Maintainers score candidates on a ten-point rubric:
 | Representativeness | 0–2 | The work is a clear reference for an important idea and is not redundant with a stronger paper already listed. |
 | Resource completeness | 0–1 | Official code, models, datasets, or a well-maintained project page make the work easier to reproduce and use. |
 
-Main-list candidates normally score at least 7/10 and at least 2/3 for agentic relevance. Because the README remains capped at 100 papers, a new addition should replace a weaker or less representative canonical entry. Relevant candidates that do not clear the threshold may be added to Extended Reading.
+Main-list candidates normally score at least 7/10 and at least 2/3 for agentic relevance. The list may grow as important work appears, but additions must clear the same quality bar and offer a distinct contribution beyond existing entries. Relevant, narrower, or less established candidates may be added to Extended Reading.
 
 ## Entry Format
 
@@ -54,10 +54,10 @@ Only add links explicitly provided by the authors or publishing organization. Ea
 Before opening a pull request:
 
 - explain the paper's agentic contribution and rubric score
-- identify the existing entry it should replace, if proposing a main-list addition
+- explain why the work merits canonical main-list placement rather than Extended Reading
 - verify the exact title, first-public-release month, and arXiv identifier
 - confirm every project, code, model, and dataset link is official
 - search both README files for duplicate titles and identifiers
 - keep entries sorted newest first within their canonical section
 - run `npx awesome-lint README.md`
-- confirm the main README still contains exactly 100 unique paper entries
+- confirm the main README remains selective and contains no duplicate canonical entries
