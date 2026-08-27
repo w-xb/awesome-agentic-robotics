@@ -2,12 +2,16 @@
 
 A curated survey of physical agents: embodied memory, planning, world/action models, verification, failure recovery, skill use, and safety for autonomous robots.
 
+**Last updated:** 2026-08-26
+
 ## Contents
 
 - [What Agentic Robotics Means Here](#what-agentic-robotics-means-here)
 - [Scope](#scope)
+- [Start Here / Must Read](#start-here--must-read)
 - [Surveys and Position Papers](#surveys-and-position-papers)
 - [Agentic Robotics Architectures](#agentic-robotics-architectures)
+- [Agentic VLA and Embodied Foundation Models](#agentic-vla-and-embodied-foundation-models)
 - [Embodied Memory](#embodied-memory)
 - [Planning and Reasoning](#planning-and-reasoning)
 - [World Models and World-Action Models](#world-models-and-world-action-models)
@@ -56,12 +60,58 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 **Paper ordering:** within each topic, entries use `\[YYYY.M]` and are sorted newest first.
 
 ---
+
+## Start Here / Must Read
+
+> Four short reading routes through the list. Each paper has one canonical entry in the topic sections below.
+
+### VLA-as-Tools
+
+**Harness VLA** — Treats a frozen VLA as a retryable contact-rich primitive inside a memory-guided agent that stages, verifies, and retries execution.
+
+**VLAs-as-Tools** — Separates temporal reasoning from physical execution through a high-level VLM agent and a family of progress-aware VLA tools.
+
+**Agentic Robot** — Organizes planning, VLA execution, temporal verification, and recovery through a structured Plan-Execute-Verify loop.
+
+**ART** — Injects on-the-fly multimodal tool use into an end-to-end VLA while preserving continuous action generation.
+
+### Hierarchical and Reasoning VLA
+
+**τ_0-VLA** — Uses execution memory and world-model-guided test-time search for difficult high-level subtask decisions.
+
+**G0.5** — Generates reasoning and action tokens in one autoregressive stream with visual memory and cross-embodiment action tokenization.
+
+**Qwen-VLA** — Unifies manipulation, navigation, trajectory supervision, and multimodal co-training across tasks and embodiments.
+
+**Gemini Robotics 1.5** — Couples generalist robot control with embodied reasoning and motion transfer across embodiments.
+
+### Memory and World Models
+
+**AtlasVLA** — Maintains a persistent world-ego state to address perception and task-progress forgetting in long-horizon control.
+
+**MEMORA** — Builds editable and consolidated embodied action memory from egocentric experience for later planning.
+
+**τ_0-WM** — Unifies action generation, future prediction, candidate evaluation, and simulator-based rectification.
+
+**Faster-WAM** — Preserves inference-time future conditioning while reducing the cost of video-action interaction.
+
+### Safety and Evaluation
+
+**MANIGUARD** — Evaluates manipulation safety against explicit specifications and pairs the benchmark with safety-annotated trajectories.
+
+**EgoSafetyBench** — Tests embodied VLMs as streaming safety guards on temporally annotated egocentric robot-view scenarios.
+
+**SafeRelBench** — Measures process-level safety violations caused by changing spatial relations during embodied execution.
+
+---
+
 ## Surveys and Position Papers
 
 > Field definitions, surveys, and position papers for Agentic Robotics.
 
 ### 2026
 
+- \[2026.8] ComBodied Agents: a New Paradigm of Human-Centric Agentic AI [paper](https://arxiv.org/abs/2608.10915)
 - \[2026.5] World Action Models: The Next Frontier in Embodied AI [paper](https://arxiv.org/abs/2605.12090)
 - \[2026.5] World Model for Robot Learning: A Comprehensive Survey [paper](https://arxiv.org/abs/2605.00080)
 - \[2026.4] Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms [paper](https://arxiv.org/abs/2604.23775)
@@ -84,6 +134,8 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 
 ### 2026
 
+- \[2026.8] ETA: A New Agentic Paradigm for Embodied Tasks [paper](https://arxiv.org/abs/2608.03924)
+- \[2026.7] Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation [paper](https://arxiv.org/abs/2607.26148)
 - \[2026.6] HoloAgent-0: A Unified Embodied Agent Framework with 3D Spatial Memory [paper](https://arxiv.org/abs/2606.23565) [project](https://horizonrobotics.github.io/robot_lab/holoagent/) [code](https://github.com/HorizonRobotics/HoloAgent)
 - \[2026.6] What Matters in Orchestrating Robot Policies: A Systematic Study of Hierarchical VLA Agents [paper](https://arxiv.org/abs/2606.10267) [project](https://jiahenghu.github.io/hi-vla)
 - \[2026.6] Agentic Neuro-Symbolic Planning and Commissioning for Human-in-the-Loop Industrial Robotics with Digital Twins [paper](https://arxiv.org/abs/2606.08214)
@@ -97,11 +149,8 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 
 ### 2025
 
-- \[2025.10] Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer [paper](https://arxiv.org/abs/2510.03342)
-- \[2025.5] Agentic Robot: A Brain-Inspired Framework for Vision-Language-Action Models in Embodied Agents [paper](https://arxiv.org/abs/2505.23450) [project](https://dreampolicy.github.io/)
 - \[2025.5] RoBridge: A Hierarchical Architecture Bridging Cognition and Execution for General Robotic Manipulation [paper](https://arxiv.org/abs/2505.01709) [project](https://abliao.github.io/RoBridge/) [code](https://github.com/abliao/RoBridge)
 - \[2025.3] CLEA: Closed-Loop Embodied Agent for Enhancing Task Execution in Dynamic Environments [paper](https://arxiv.org/abs/2503.00729) [project](https://sp4595.github.io/CLEA/) [code](https://github.com/SP4595/CLEA-Closed-Loop-Embodied-Agent)
-- \[2025.2] Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models [paper](https://arxiv.org/html/2502.19417v1) [project](https://www.pi.website/research/hirobot)
 
 ### 2023
 
@@ -113,12 +162,40 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 
 ---
 
+## Agentic VLA and Embodied Foundation Models
+
+> VLA-centric systems that expose robot policies as skills or tools, add planning, verification, recovery, memory, dynamic tool use, or online adaptation, or provide hierarchical and cross-embodiment foundations for agentic control.
+
+### 2026
+
+- \[2026.8] τ_0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation [paper](https://arxiv.org/abs/2608.16885)
+- \[2026.8] Evolve Vision-Language-Action Model into an Agent with On-the-fly Tool-use [paper](https://arxiv.org/abs/2608.14047)
+- \[2026.8] G0.5: One Autoregressive Stream for Robot Reasoning and Action [paper](https://arxiv.org/abs/2608.11739)
+- \[2026.7] TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM [paper](https://arxiv.org/abs/2607.27205)
+- \[2026.7] RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model [paper](https://arxiv.org/abs/2607.17977) [code](https://github.com/alibaba-damo-academy/RynnBrain)
+- \[2026.7] Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents [paper](https://arxiv.org/abs/2607.08448) [project](https://harnessvla.github.io/) [code](https://github.com/RLinf/RPent)
+- \[2026.5] Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments [paper](https://arxiv.org/abs/2605.30280)
+- \[2026.5] Agentic-VLA: Efficient Online Adaptation for Vision-Language-Action Models [paper](https://arxiv.org/abs/2605.22896)
+- \[2026.5] Towards Long-horizon Embodied Agents with Tool-Aligned Vision-Language-Action Models [paper](https://arxiv.org/abs/2605.13119)
+
+### 2025
+
+- \[2025.10] Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer [paper](https://arxiv.org/abs/2510.03342)
+- \[2025.5] Agentic Robot: A Brain-Inspired Framework for Vision-Language-Action Models in Embodied Agents [paper](https://arxiv.org/abs/2505.23450) [project](https://agentic-robot.github.io/) [code](https://github.com/Agentic-Robot/agentic-robot)
+- \[2025.4] π0.5: a Vision-Language-Action Model with Open-World Generalization [paper](https://arxiv.org/abs/2504.16054) [project](https://www.pi.website/blog/pi05) [code](https://github.com/Physical-Intelligence/openpi)
+- \[2025.2] Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models [paper](https://arxiv.org/html/2502.19417v1) [project](https://www.pi.website/research/hirobot)
+
+---
+
 ## Embodied Memory
 
 > Memory systems for physical agents: working memory, memory banks, semantic-spatial memory, scene memory, and embodied retrieval.
 
 ### 2026
 
+- \[2026.8] AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models [paper](https://arxiv.org/abs/2608.06729)
+- \[2026.7] MEMORA: Embodied Action Memory from Egocentric Videos for Reasoning and Planning [paper](https://arxiv.org/abs/2607.14252) [project](https://yuzihaowashu.github.io/MEMORA/)
+- \[2026.7] Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation [paper](https://arxiv.org/abs/2607.07608)
 - \[2026.6] eMEM: A Hybrid Spatio-Temporal Memory System For Embodied Agents [paper](https://arxiv.org/abs/2606.03374)
 - \[2026.3] Chameleon: Episodic Memory for Long-Horizon Robotic Manipulation [paper](https://arxiv.org/abs/2603.24576)
 - \[2026.3] ReMem-VLA: Empowering Vision-Language-Action Model with Memory via Dual-Level Recurrent Queries [paper](https://arxiv.org/abs/2603.12942)
@@ -193,11 +270,16 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 
 ### 2026
 
+- \[2026.8] World Tokens: Enhancing Embodied Policies with Training-Time World Modeling [paper](https://arxiv.org/abs/2608.09730)
+- \[2026.8] Faster-WAM: Efficient Inference-Time Future Conditioning for Robust World Action Models [paper](https://arxiv.org/abs/2608.04404)
+- \[2026.7] ACID: Action Consistency via Inverse Dynamics for Planning with World Models [paper](https://arxiv.org/abs/2607.02403)
 - \[2026.7] ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts [paper](https://arxiv.org/abs/2607.28993) [project](https://thu-wangmx.github.io/st-wam/) [code](https://github.com/Thu-WangMX/ST-WAM-Semantic-Temporal-World-Action-Model)
+- \[2026.6] Learning Transferable Dynamics Priors from Action to World Modeling [paper](https://arxiv.org/abs/2606.29501)
 - \[2026.6] MemoryWAM: Efficient World Action Modeling with Persistent Memory [paper](https://arxiv.org/abs/2606.20562)
 - \[2026.6] NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation [paper](https://arxiv.org/abs/2606.13494)
 - \[2026.6] World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis [paper](https://arxiv.org/abs/2606.05979)
 - \[2026.6] WALL-WM: Carving World Action Modeling at the Event Joints [paper](https://arxiv.org/abs/2606.01955) [project](https://github.com/X-Square-Robot/wall-x)
+- \[2026.6] τ_0-WM: A Unified Video-Action World Model for Robotic Manipulation [paper](https://arxiv.org/abs/2606.01027)
 - \[2026.5] GEM-4D: Geometry-Enhanced Video World Models for Robot Manipulation [paper](https://arxiv.org/abs/2605.22882)
 - \[2026.5] Being-H0.7: A Latent World-Action Model from Egocentric Videos [paper](https://arxiv.org/abs/2605.00078)
 - \[2026.4] MotuBrain: An Advanced World Action Model for Robot Control [paper](https://arxiv.org/abs/2604.27792)
@@ -224,6 +306,9 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 
 ### 2026
 
+- \[2026.8] MANIGUARD: A Benchmark and Data Suite for Specification-Grounded Safety Evaluation and Improvement of Robotic Manipulation [paper](https://arxiv.org/abs/2608.17386)
+- \[2026.7] SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents [paper](https://arxiv.org/abs/2607.14543)
+- \[2026.7] EgoSafetyBench: A Diagnostic Egocentric Video Benchmark for Evaluating Embodied VLMs as Runtime Safety Guards [paper](https://arxiv.org/abs/2607.00218)
 - \[2026.6] Visual Verification Enables Inference-time Steering and Autonomous Policy Improvement [paper](https://arxiv.org/abs/2606.18247)
 - \[2026.6] VASO: Formally Verifiable Self-Evolving Skills for Physical AI Agents [paper](https://arxiv.org/abs/2606.05395)
 - \[2026.5] Pre-VLA: Preemptive Runtime Verification for Reliable Vision-Language-Action and World-Model Rollouts [paper](https://arxiv.org/abs/2605.22446)
@@ -319,10 +404,6 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 - \[2026.3] Non-Markovian Long-Horizon Robot Manipulation via Keyframe Chaining [paper](https://arxiv.org/abs/2603.01465)
 - \[2026.2] LiLo-VLA: Compositional Long-Horizon Manipulation via Linked Object-Centric Policies [paper](https://arxiv.org/abs/2602.21531)
 
-### 2025
-
-- \[2025.4] pi0.5: a Vision-Language-Action Model with Open-World Generalization [paper](https://arxiv.org/abs/2504.16054) [project](https://www.pi.website/blog/pi05) [code](https://github.com/Physical-Intelligence/openpi)
-
 ---
 
 ## Embodied Navigation Agents
@@ -331,6 +412,7 @@ This repository follows a compact Awesome-list style: entries are grouped by top
 
 ### 2026
 
+- \[2026.8] Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation [paper](https://arxiv.org/abs/2608.17512)
 - \[2026.6] SpaceVLN: A Zero-Shot Vision-and-Language Navigation Agent with Online Spatial Cognitive Memory and Reasoning [paper](https://arxiv.org/abs/2606.08992)
 - \[2026.6] EvoMemNav: Efficient Self-Evolving Fine-Grained Memory for Zero-Shot Embodied Navigation [paper](https://arxiv.org/abs/2606.03509)
 - \[2026.5] Uni-LaViRA: Language-Vision-Robot Actions Translation for Unified Embodied Navigation [paper](https://arxiv.org/abs/2605.27582)
