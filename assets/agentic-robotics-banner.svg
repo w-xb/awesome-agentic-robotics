@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome Agentic Robotics</title>
+  <desc id="desc">A capability map connecting planning, memory, tools, verification, and safety to an autonomous robot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08162f"/>
+      <stop offset="0.52" stop-color="#102958"/>
+      <stop offset="1" stop-color="#32165f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38d9ff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="robot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#a7c7ee"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#a8c7fa" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="28" fill="url(#grid)"/>
+  <circle cx="1055" cy="70" r="170" fill="#38d9ff" opacity="0.08"/>
+  <circle cx="935" cy="385" r="220" fill="#a78bfa" opacity="0.10"/>
+
+  <g transform="translate(68 76)">
+    <rect width="88" height="30" rx="15" fill="#38d9ff" opacity="0.14"/>
+    <circle cx="17" cy="15" r="5" fill="#38d9ff"/>
+    <text x="30" y="20" fill="#bdefff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">AWESOME</text>
+    <text x="0" y="92" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="800" letter-spacing="1">AGENTIC</text>
+    <text x="0" y="150" fill="url(#accent)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="800" letter-spacing="1">ROBOTICS</text>
+    <text x="2" y="194" fill="#c7d8ef" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20">Curated research on autonomous physical agents</text>
+
+    <g transform="translate(0 226)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="0.7">
+      <rect width="92" height="34" rx="17" fill="#38d9ff" opacity="0.13" stroke="#38d9ff" stroke-opacity="0.5"/>
+      <text x="46" y="22" text-anchor="middle" fill="#bdefff">PERCEIVE</text>
+      <rect x="102" width="74" height="34" rx="17" fill="#60a5fa" opacity="0.14" stroke="#60a5fa" stroke-opacity="0.5"/>
+      <text x="139" y="22" text-anchor="middle" fill="#bfdbfe">PLAN</text>
+      <rect x="186" width="68" height="34" rx="17" fill="#a78bfa" opacity="0.14" stroke="#a78bfa" stroke-opacity="0.5"/>
+      <text x="220" y="22" text-anchor="middle" fill="#ddd6fe">ACT</text>
+      <rect x="264" width="88" height="34" rx="17" fill="#f472b6" opacity="0.14" stroke="#f472b6" stroke-opacity="0.5"/>
+      <text x="308" y="22" text-anchor="middle" fill="#fbcfe8">VERIFY</text>
+      <rect x="362" width="82" height="34" rx="17" fill="#34d399" opacity="0.14" stroke="#34d399" stroke-opacity="0.5"/>
+      <text x="403" y="22" text-anchor="middle" fill="#bbf7d0">LEARN</text>
+    </g>
+  </g>
+
+  <g transform="translate(665 55)">
+    <g fill="none" stroke="#77dff5" stroke-opacity="0.38" stroke-width="2">
+      <path d="M135 62C215 55 249 76 293 121"/>
+      <path d="M123 80C78 117 76 156 92 192"/>
+      <path d="M305 141C326 189 316 226 275 263"/>
+      <path d="M108 216C148 265 197 278 251 267"/>
+      <path d="M180 168L222 168" stroke-dasharray="5 7"/>
+    </g>
+
+    <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700">
+      <g transform="translate(36 30)">
+        <rect width="112" height="52" rx="16" fill="#102f57" stroke="#38d9ff" stroke-opacity="0.65"/>
+        <circle cx="22" cy="26" r="8" fill="#38d9ff" opacity="0.85"/>
+        <path d="M18 26h8M22 22v8" stroke="#09213d" stroke-width="2"/>
+        <text x="40" y="31" fill="#d6f7ff">PLANNING</text>
+      </g>
+      <g transform="translate(290 92)">
+        <rect width="112" height="52" rx="16" fill="#252052" stroke="#a78bfa" stroke-opacity="0.75"/>
+        <path d="M17 18h18v17H17zM21 14h18v17" fill="none" stroke="#c4b5fd" stroke-width="2"/>
+        <text x="49" y="31" fill="#ede9fe">MEMORY</text>
+      </g>
+      <g transform="translate(32 190)">
+        <rect width="112" height="52" rx="16" fill="#153153" stroke="#60a5fa" stroke-opacity="0.75"/>
+        <path d="M18 17l16 9-16 9z" fill="#93c5fd"/>
+        <text x="47" y="31" fill="#dbeafe">TOOLS</text>
+      </g>
+      <g transform="translate(248 250)">
+        <rect width="126" height="52" rx="16" fill="#392047" stroke="#f472b6" stroke-opacity="0.75"/>
+        <path d="M19 26l6 6 12-14" fill="none" stroke="#f9a8d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="49" y="31" fill="#fce7f3">VERIFICATION</text>
+      </g>
+    </g>
+
+    <g transform="translate(145 105)" filter="url(#glow)">
+      <circle cx="82" cy="70" r="65" fill="#38d9ff" opacity="0.10"/>
+      <rect x="46" y="38" width="72" height="61" rx="18" fill="url(#robot)" stroke="#ffffff" stroke-opacity="0.75"/>
+      <rect x="61" y="25" width="42" height="20" rx="10" fill="#dcebff"/>
+      <circle cx="69" cy="65" r="7" fill="#0f2c56"/>
+      <circle cx="95" cy="65" r="7" fill="#0f2c56"/>
+      <path d="M67 84c10 8 20 8 30 0" fill="none" stroke="#31588b" stroke-width="4" stroke-linecap="round"/>
+      <path d="M45 77L21 95 9 80M119 77l24 18 13-15" fill="none" stroke="#c8dcf5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="40" y="102" width="84" height="61" rx="22" fill="#acc9eb" stroke="#ffffff" stroke-opacity="0.65"/>
+      <path d="M65 115h34M82 115v35" stroke="#345d91" stroke-width="5" stroke-linecap="round"/>
+      <path d="M54 158l-15 34M110 158l15 34" stroke="#c8dcf5" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="82" cy="132" r="8" fill="#34d399"/>
+    </g>
+
+    <g transform="translate(397 174)">
+      <path d="M30 2l25 10v19c0 18-11 32-25 39C16 63 5 49 5 31V12z" fill="#103a42" stroke="#34d399" stroke-width="2"/>
+      <path d="M19 35l8 8 16-20" fill="none" stroke="#6ee7b7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="30" y="91" text-anchor="middle" fill="#bbf7d0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">SAFETY</text>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="1198" height="418" rx="27" fill="none" stroke="#b9d8ff" stroke-opacity="0.18" stroke-width="2"/>
+</svg>
