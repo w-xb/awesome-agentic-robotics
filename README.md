@@ -105,6 +105,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Surveys and Position Papers
 
+> Field definitions, surveys, and position papers that establish the concepts, taxonomy, capabilities, risks, and open questions of Agentic Robotics.
+
 - \[2026.5] **World Action Models: The Next Frontier in Embodied AI** [paper](https://arxiv.org/abs/2605.12090) — Defines world-action modeling, organizes its major architectural choices, and identifies how predictive environment dynamics can improve planning and closed-loop robot control.
 - \[2026.5] **World Model for Robot Learning: A Comprehensive Survey** [paper](https://arxiv.org/abs/2605.00080) — Reviews world-model objectives, representations, datasets, and downstream uses across robot learning, providing a broad foundation for prediction-guided embodied decision making.
 - \[2026.4] **Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms** [paper](https://arxiv.org/abs/2604.23775) — Systematizes VLA safety threats, evaluation protocols, and mitigation mechanisms across training and deployment, connecting model risks to physical execution consequences.
@@ -112,6 +114,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 - \[2023.11] **Large Language Models for Robotics: A Survey** [paper](https://arxiv.org/html/2311.07226v2) — Surveys early uses of large language models for perception, planning, control, and human-robot interaction, establishing essential context for modern agentic systems.
 
 ## Agentic Robotics Architectures
+
+> End-to-end or multi-module robot-agent systems that organize planning, execution, memory, verification, recovery, skill selection, tool interfaces, or multi-agent coordination.
 
 - \[2026.8] **ETA: A New Agentic Paradigm for Embodied Tasks** [paper](https://arxiv.org/abs/2608.03924) — Presents an agentic embodied-task framework that coordinates reasoning and execution through a minimal interface, emphasizing transferable orchestration over monolithic policy scaling.
 - \[2026.7] **Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation** [paper](https://arxiv.org/abs/2607.26148) — Shows that minimally interfaced foundation-model agents can compete with specialized navigation policies through zero-shot reasoning, feedback, and structured action selection.
@@ -123,6 +127,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 - \[2022.4] **Do As I Can, Not As I Say: Grounding Language in Robotic Affordances** [paper](https://arxiv.org/abs/2204.01691) [project](https://say-can.github.io/) — Grounds language-model planning in learned affordance values, ensuring selected skills are both semantically appropriate and physically executable by the robot.
 
 ## Agentic VLA and Embodied Foundation Models
+
+> VLA-centric systems that expose robot policies as skills or tools, add reasoning, verification, recovery, memory, or online adaptation, or provide hierarchical and cross-embodiment foundations for agentic control.
 
 - \[2026.8] **τ_0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation** [paper](https://arxiv.org/abs/2608.16885) — Uses execution memory and world-model-guided test-time search to improve high-level subtask decisions in a hierarchical robot foundation model.
 - \[2026.8] **Evolve Vision-Language-Action Model into an Agent with On-the-fly Tool-use** [paper](https://arxiv.org/abs/2608.14047) — Introduces ART, which injects dynamic multimodal tool calls into VLA control and trains long-trajectory tool reasoning for robust physical execution.
@@ -138,6 +144,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Embodied Memory
 
+> Memory systems for physical agents, including working and episodic memory, semantic-spatial scene representations, experience retrieval, and persistent world or task state.
+
 - \[2026.8] **AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models** [paper](https://arxiv.org/abs/2608.06729) — Maintains a persistent world-ego state that preserves spatial context and task progress, reducing forgetting during long-horizon VLA execution.
 - \[2026.7] **MEMORA: Embodied Action Memory from Egocentric Videos for Reasoning and Planning** [paper](https://arxiv.org/abs/2607.14252) [project](https://yuzihaowashu.github.io/MEMORA/) — Converts egocentric experience into editable, consolidated action memories that can be retrieved and recomposed for later embodied reasoning and planning.
 - \[2026.3] **Chameleon: Episodic Memory for Long-Horizon Robotic Manipulation** [paper](https://arxiv.org/abs/2603.24576) — Uses episodic experience retrieval to adapt manipulation behavior over long horizons, connecting remembered outcomes to current task decisions.
@@ -148,6 +156,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 - \[2024.11] **DynaMem: Online Dynamic Spatio-Semantic Memory for Open World Mobile Manipulation** [paper](https://arxiv.org/abs/2411.04999) [project](https://dynamem.github.io/) [code](https://github.com/hello-robot/stretch_ai) — Updates spatio-semantic memory online as environments change, enabling open-world mobile manipulation with persistent object and scene knowledge during extended deployments.
 
 ## Planning and Reasoning
+
+> LLM/VLM-based task planning, grounded reasoning, decomposition, formal or programmatic plans, value maps, future-state prediction, and closed-loop replanning from feedback.
 
 - \[2025.12] **Large Video Planner** [paper](https://arxiv.org/abs/2512.15840) [project](https://www.boyuan.space/large-video-planner/) [code](https://github.com/buoyancy99/large-video-planner/tree/main) — Plans long-horizon robot behavior through generated visual futures, using video-level predictions to represent intermediate physical states and actions.
 - \[2025.9] **Reinforced Embodied Planning with Verifiable Reward for Real-World Robotic Manipulation** [paper](https://arxiv.org/abs/2509.25852) — Trains embodied planning with automatically verifiable rewards, improving structured reasoning and real-world manipulation without relying solely on imitation traces.
@@ -164,6 +174,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## World Models and World-Action Models
 
+> Predictive models that learn environment dynamics or joint video-action structure to support future imagination, candidate evaluation, control, action synthesis, and internal planning.
+
 - \[2026.8] **World Tokens: Enhancing Embodied Policies with Training-Time World Modeling** [paper](https://arxiv.org/abs/2608.09730) — Adds predictive world tokens during training to improve embodied policies while avoiding the deployment cost of explicit future generation.
 - \[2026.8] **Faster-WAM: Efficient Inference-Time Future Conditioning for Robust World Action Models** [paper](https://arxiv.org/abs/2608.04404) — Retains future-conditioned action selection while reducing video-action interaction cost, making inference-time imagination more practical for robust control during online execution.
 - \[2026.7] **ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts** [paper](https://arxiv.org/abs/2607.28993) [project](https://thu-wangmx.github.io/st-wam/) [code](https://github.com/Thu-WangMX/ST-WAM-Semantic-Temporal-World-Action-Model) — Combines DINOv3 semantic future prediction and history retrieval with VAE dynamics, improving zero-shot LIBERO-Plus by 21.3 points and real-world visual-shift success from 25.8% to 61.5%.
@@ -177,6 +189,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Verification, Recovery, and Safety Evaluation
 
+> Success detection, temporal and specification-grounded verification, runtime policy steering, execution checking, and process-level evaluation of physical safety.
+
 - \[2026.8] **MANIGUARD: A Benchmark and Data Suite for Specification-Grounded Safety Evaluation and Improvement of Robotic Manipulation** [paper](https://arxiv.org/abs/2608.17386) — Evaluates manipulation trajectories against explicit safety specifications and provides annotated data for improving process-level physical safety during execution.
 - \[2026.7] **SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents** [paper](https://arxiv.org/abs/2607.14543) — Measures safety violations caused by changing spatial relations during execution, revealing failures that final-state success metrics overlook during long-horizon tasks.
 - \[2026.7] **EgoSafetyBench: A Diagnostic Egocentric Video Benchmark for Evaluating Embodied VLMs as Runtime Safety Guards** [paper](https://arxiv.org/abs/2607.00218) — Tests embodied VLMs as streaming runtime guards using temporally annotated egocentric scenarios and diagnostic categories of physical risk.
@@ -188,6 +202,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Failure Detection and Recovery
 
+> Failure prediction and detection, causal diagnosis, natural-language failure reasoning, motion correction, task-level recovery, backtracking, and safe human takeover.
+
 - \[2026.1] **CycleVLA: Proactive Self-Correcting Vision-Language-Action Models via Subtask Backtracking and Minimum Bayes Risk Decoding** [paper](https://arxiv.org/abs/2601.02295) [project](https://dannymcy.github.io/cyclevla/) — Proactively detects uncertain subtasks, backtracks execution, and uses minimum Bayes risk decoding to select safer corrective VLA actions.
 - \[2025.10] **FailSafe-VLM: Reasoning and Recovery from Failures in Vision-Language-Action Models** [paper](https://arxiv.org/html/2510.01642v1) — Uses vision-language reasoning to identify VLA execution failures, explain their causes, and produce context-sensitive recovery strategies during long-horizon execution.
 - \[2025.9] **FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction** [paper](https://arxiv.org/abs/2509.04018) [project](https://fpcvla.github.io/) — Adds a supervisory model that predicts impending failures and corrects VLA actions before errors propagate through long-horizon tasks.
@@ -195,6 +211,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 - \[2024.9] **Automating Robot Failure Recovery Using Vision-Language Models** [paper](https://arxiv.org/abs/2409.03966) — Uses vision-language models to interpret execution failures and automatically select recovery actions, establishing a practical general-purpose recovery pipeline.
 
 ## Skill Learning and Tool Use
+
+> Robot skill repositories, physical and software tool use, capability discovery, task decomposition, skill composition, code generation, and execution interfaces such as ROS.
 
 - \[2026.6] **CLASP: Language-Driven Robot Skill Selection and Composition using Task-Parameterized Learning** [paper](https://arxiv.org/abs/2606.08169) — Uses language to select and compose task-parameterized robot skills, supporting adaptable execution beyond fixed primitive sequences and object configurations.
 - \[2026.3] **CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation** [paper](https://arxiv.org/abs/2603.22435) — Benchmarks code-generating agents on robot manipulation and provides a framework for improving executable programs through environment feedback and iterative repair.
@@ -207,6 +225,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Long-Horizon Manipulation
 
+> Multi-stage manipulation systems that sustain task progress through hierarchical policies, memory, progress estimation, skill chaining, adaptive planning, reflection, and recovery-aware execution.
+
 - \[2026.6] **SERF: Spatiotemporal Environment and Robot Feature Map for Long-Horizon Mobile Manipulation** [paper](https://arxiv.org/abs/2606.12956) — Maintains spatiotemporal environment and robot features to support persistent state tracking across long-horizon mobile manipulation tasks under partial observability.
 - \[2026.4] **Long-Horizon Manipulation via Trace-Conditioned VLA Planning** [paper](https://arxiv.org/abs/2604.21924) — Conditions VLA planning on structured execution traces, preserving progress information and improving action selection over extended manipulation sequences.
 - \[2026.4] **Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection** [paper](https://arxiv.org/abs/2604.13942) — Converts goals into reusable skills and adapts their composition through execution feedback and reflection during long-horizon manipulation and unexpected state changes.
@@ -214,6 +234,8 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 - \[2026.2] **LiLo-VLA: Compositional Long-Horizon Manipulation via Linked Object-Centric Policies** [paper](https://arxiv.org/abs/2602.21531) — Links object-centric policies into compositional plans, enabling VLA execution to reuse local behaviors across longer manipulation tasks and environments.
 
 ## Embodied Navigation
+
+> Vision-language and object-goal navigation agents that combine spatial memory, map or scene reasoning, active exploration, adaptive control, self-correction, and cross-embodiment deployment.
 
 - \[2026.8] **Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation** [paper](https://arxiv.org/abs/2608.17512) — Introduces TAMP-Nav, combining pixel-to-3D actions, selective reasoning, trajectory memory, and process-level alignment for efficient embodied navigation with lower overhead.
 - \[2026.6] **SpaceVLN: A Zero-Shot Vision-and-Language Navigation Agent with Online Spatial Cognitive Memory and Reasoning** [paper](https://arxiv.org/abs/2606.08992) — Maintains online spatial cognitive memory and reasons over it to perform zero-shot language-guided navigation in unseen environments without task-specific training.
@@ -225,16 +247,22 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Human-Robot Interaction
 
+> Language-enabled human feedback, dialogue, mixed initiative, human modeling, social robot planning, collaborative manipulation, and human-in-the-loop coordination.
+
 - \[2024.1] **Understanding LLM-powered Human-Robot Interaction** [paper](https://arxiv.org/abs/2401.03217) — Examines how large language models reshape human-robot communication, task interpretation, trust, and interaction design in embodied settings and deployments.
 - \[2023.3] **Large Language Models as Zero-Shot Human Models for Human-Robot Interaction** [paper](https://arxiv.org/abs/2303.03548) — Uses language models to predict human preferences and behavior without task-specific training, supporting adaptive planning in human-robot interaction.
 
 ## Governance and Physical Safety
+
+> Governance constraints, policy-compliant execution, consent and delegation, runtime guardrails, physical irreversibility, and mechanisms for keeping autonomous behavior within acceptable boundaries.
 
 - \[2026.5] **Consent Chain Degradation in Embodied Multi-Agent Systems** [paper](https://arxiv.org/html/2605.16300v1) — Studies how consent constraints weaken across delegated multi-agent execution, exposing governance risks unique to embodied action chains and delegation structures.
 - \[2026.4] **EmbodiedGovBench: A Benchmark for Governance-Constrained Embodied Agents** [paper](https://arxiv.org/html/2604.11174v1) — Evaluates whether embodied agents follow governance policies while pursuing tasks, separating rule compliance from conventional completion metrics or isolated benchmarks.
 - \[2026.4] **Harnessing Embodied Agents: Runtime Governance for Policy-Constrained Execution** [paper](https://arxiv.org/abs/2604.07833) — Introduces runtime governance mechanisms that monitor and constrain agent actions against explicit policies during physical execution with minimal latency.
 
 ## Benchmarks and Datasets
+
+> Benchmarks, simulators, and datasets for generalist policies, long-horizon tasks, lifelong transfer, navigation, multi-robot systems, manipulation, recovery, and embodied safety.
 
 - \[2026.3] **RoboCasa365: A Large-Scale Simulation Framework for Generalist Robot Policies** [paper](https://arxiv.org/html/2603.04356v1) — Expands everyday manipulation simulation with broad tasks and environments for training and evaluating generalist, long-horizon robot policies across varied settings.
 - \[2025.4] **RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins** [paper](https://arxiv.org/abs/2504.13059) — Uses generative digital twins to scale diverse dual-arm manipulation tasks, data collection, and reproducible policy evaluation across varied scenes.
@@ -245,9 +273,13 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Open-Source Foundation Models
 
+> Openly released generalist robot policies, model weights, training stacks, and reusable foundations that support adaptation across tasks, environments, and embodiments.
+
 - \[2024.5] **Octo: An Open-Source Generalist Robot Policy** [paper](https://arxiv.org/abs/2405.12213) [project](https://octo-models.github.io/) [code](https://github.com/octo-models/octo) — Provides an openly released generalist robot policy, training stack, and checkpoints built from heterogeneous manipulation datasets across embodiments.
 
 ## Industrial Systems
+
+> Technical reports and industrial systems that demonstrate deployable embodied reasoning, generalist robot control, cross-embodiment transfer, and real-world product direction.
 
 - \[2025.3] **\[Google DeepMind] Gemini Robotics: Bringing AI into the Physical World** [paper](https://arxiv.org/abs/2503.20020) — Presents an industrial-scale embodied reasoning model and generalist VLA system designed to transfer semantic understanding into dexterous physical action.
 
