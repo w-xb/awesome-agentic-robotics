@@ -12,6 +12,7 @@ Submissions should materially advance at least one capability of physical agency
 - world models used for prediction, evaluation, or control
 - execution verification, failure attribution, and recovery
 - robot tool use, skill calling, or execution interfaces
+- self-evolving skills, policies, objectives, data pipelines, verifiers, or runtime harnesses
 - long-horizon manipulation or navigation
 - governance, runtime safety, or process-level evaluation
 
@@ -49,6 +50,8 @@ Use link labels consistently:
 
 Only add links explicitly provided by the authors or publishing organization. Each paper has one canonical entry and must not be duplicated across topic sections. Must Read descriptions are maintained by the repository curators and use 30–50 words.
 
+For self-evolving work, state the primary evolution target and distinguish persistent updates across episodes from transient replanning or fixed-library retrieval.
+
 ## Pull Request Checklist
 
 Before opening a pull request:
@@ -58,6 +61,7 @@ Before opening a pull request:
 - verify the exact title, first-public-release month, and arXiv identifier
 - confirm every project, code, model, and dataset link is official
 - search both README files for duplicate titles and identifiers
+- classify self-evolving entries by their primary target (skill, harness, verifier, memory, policy, objective, data, or interface)
 - keep entries sorted newest first within their canonical section
 - run `npx awesome-lint README.md`
 - confirm the main README remains selective and contains no duplicate canonical entries

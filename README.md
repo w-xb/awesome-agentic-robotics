@@ -2,7 +2,7 @@
 
 A living, selective reading list of influential work on autonomous physical agents, spanning planning, agentic VLA, memory, world models, verification, recovery, tool use, and safety.
 
-**Last updated:** 2026-08-27
+**Last updated:** 2026-09-07
 
 ## Contents
 
@@ -12,6 +12,7 @@ A living, selective reading list of influential work on autonomous physical agen
 - [Surveys and Position Papers](#surveys-and-position-papers)
 - [Agentic Robotics Architectures](#agentic-robotics-architectures)
 - [Agentic VLA and Embodied Foundation Models](#agentic-vla-and-embodied-foundation-models)
+- [Self-Evolving Embodied Agents](#self-evolving-embodied-agents)
 - [Embodied Memory](#embodied-memory)
 - [Planning and Reasoning](#planning-and-reasoning)
 - [World Models and World-Action Models](#world-models-and-world-action-models)
@@ -39,7 +40,7 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Scope and Curation
 
-**Core scope.** The list covers planning and grounded reasoning; VLA-as-tools and hierarchical VLA; embodied memory and persistent state; world models used for prediction, evaluation, or control; execution verification and recovery; skill learning and robot tool use; long-horizon manipulation and navigation; human-robot interaction; and governance, runtime safety, and embodied evaluation.
+**Core scope.** The list covers planning and grounded reasoning; VLA-as-tools and hierarchical VLA; self-evolving skills, tools, policies, objectives, verifiers, data pipelines, and runtime harnesses; embodied memory and persistent state; world models used for prediction, evaluation, or control; execution verification and recovery; skill learning and robot tool use; long-horizon manipulation and navigation; human-robot interaction; and governance, runtime safety, and embodied evaluation.
 
 **Selection principles.** Entries are chosen for agentic relevance, influence, evidence quality, representativeness, and resource completeness. The list includes both modular LLM/VLM-agent architectures and tightly coupled robot-learning systems when they make a clear contribution to closed-loop physical agency. General-purpose VLA work is included only when it materially advances planning, long-horizon execution, tool use, verification, recovery, embodied memory, world-model-based decisions, continual adaptation, or cross-embodiment deployment.
 
@@ -51,7 +52,7 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 ## Start Here / Must Read
 
-> Twenty high-signal papers organized as four reading routes. Each also appears once in its canonical topic section.
+> Twenty-five high-signal papers organized as five reading routes. Each also appears once in its canonical topic section.
 
 ### VLA as Tools and Agents
 
@@ -64,6 +65,18 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 **ART** — Injects off-the-shelf multimodal tools into an end-to-end VLA without abandoning continuous action generation. Tool-use trajectories and long-horizon reasoning training demonstrate how modular capabilities can improve robustness, data efficiency, and extensibility in simulation and real robots.
 
 **Gemini Robotics 1.5** — Couples a generalist robot policy with embodied reasoning, explicit thinking, and motion transfer across embodiments. It is an important industrial-scale example of moving beyond direct instruction following toward generalizable, reasoning-guided physical action.
+
+### Self-Evolution Highlights
+
+**Zetta ζ** — Freezes the base VLA and high-level orchestrator while evolving runtime critics, recovery playbooks, and typed tools. Its action-frequency monitoring, failure-cluster diagnosis, replay, same-seed regression, and held-out promotion make it the clearest current reference for versioned harness evolution in embodied execution.
+
+**SHAPER** — Separately evolves reusable textual skills and a context-code harness around frozen planner and executor models. Its two-stage skill-then-harness search, sandboxed candidates, and top-k validation provide a useful contrast to Zetta's action-frequency runtime governance.
+
+**ASPIRE** — Turns robot execution traces into causal failure diagnoses, repaired programs, and reusable skills through iterative exploration. The distinction between one-off repair and validated skill abstraction makes it a strong reference for failure-driven skill evolution.
+
+**VASO** — Refines embodied skill contracts against temporal specifications and model-checking counterexamples. By making preconditions, local rules, and planner-facing semantics explicit, it connects self-evolving skills to formal verification and physical safety constraints without updating foundation-model weights.
+
+**ENPIRE** — Runs a coding-agent loop on real robots that edits policy-improvement algorithms, rewards, training infrastructure, and evaluation code from rollout evidence. It represents a deeper policy and training evolution layer than Zetta's frozen-policy runtime harness.
 
 ### Hierarchical and Reasoning VLA
 
@@ -107,10 +120,12 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 > Field definitions, surveys, and position papers that establish the concepts, taxonomy, capabilities, risks, and open questions of Agentic Robotics.
 
+- \[2026.7] **Self-Improvements in Modern Agentic Systems: A Survey** [paper](https://arxiv.org/abs/2607.13104) [project](https://selfimproving-agent.github.io/) [code](https://github.com/selfimproving-agent/awesome-Self-Improving-Agents) — Defines agents as foundation models coupled to operational scaffolds and organizes self-improvement by update target, driving signal, evaluation, and open problems.
 - \[2026.5] **World Action Models: The Next Frontier in Embodied AI** [paper](https://arxiv.org/abs/2605.12090) — Defines world-action modeling, organizes its major architectural choices, and identifies how predictive environment dynamics can improve planning and closed-loop robot control.
 - \[2026.5] **World Model for Robot Learning: A Comprehensive Survey** [paper](https://arxiv.org/abs/2605.00080) — Reviews world-model objectives, representations, datasets, and downstream uses across robot learning, providing a broad foundation for prediction-guided embodied decision making.
 - \[2026.4] **Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms** [paper](https://arxiv.org/abs/2604.23775) — Systematizes VLA safety threats, evaluation protocols, and mitigation mechanisms across training and deployment, connecting model risks to physical execution consequences.
 - \[2025.8] **Towards Embodied Agentic AI: Review and Classification of LLM- and VLM-Driven Robot Autonomy and Interaction** [paper](https://arxiv.org/abs/2508.05294) — Classifies language- and vision-driven robot agents by autonomy, interaction, architecture, and embodiment, clarifying the emerging design space of agentic robotics.
+- \[2025.7] **A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve on the Path to Artificial Super Intelligence** [paper](https://arxiv.org/abs/2507.21046) — Organizes self-evolution across model, context, tools, and agentic architecture, distinguishing transient test-time adaptation from persistent changes that affect future tasks.
 - \[2023.11] **Large Language Models for Robotics: A Survey** [paper](https://arxiv.org/html/2311.07226v2) — Surveys early uses of large language models for perception, planning, control, and human-robot interaction, establishing essential context for modern agentic systems.
 
 ## Agentic Robotics Architectures
@@ -141,6 +156,25 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 - \[2025.5] **Agentic Robot: A Brain-Inspired Framework for Vision-Language-Action Models in Embodied Agents** [paper](https://arxiv.org/abs/2505.23450) [project](https://agentic-robot.github.io/) [code](https://github.com/Agentic-Robot/agentic-robot) — Coordinates planning, VLA execution, temporal verification, and error recovery through a structured Plan-Execute-Verify loop for embodied agents and autonomous recovery.
 - \[2025.4] **π0.5: a Vision-Language-Action Model with Open-World Generalization** [paper](https://arxiv.org/abs/2504.16054) [project](https://www.pi.website/blog/pi05) [code](https://github.com/Physical-Intelligence/openpi) — Combines heterogeneous robot data and semantic knowledge to improve open-world generalization for manipulation in unseen environments and tasks.
 - \[2025.2] **Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models** [paper](https://arxiv.org/html/2502.19417v1) [project](https://www.pi.website/research/hirobot) — Decomposes open-ended instructions into semantic subgoals and low-level VLA actions, demonstrating hierarchical reasoning for interactive robot control across diverse tasks.
+
+## Self-Evolving Embodied Agents
+
+> Systems that use execution or training feedback to propose, validate, and retain changes to a robot agent's skills, tools, policy, objective, memory, verifier, or runtime harness. Transient replanning, test-time adaptation, and fixed-library recovery remain in their canonical or extended sections.
+
+**Layer key.** `harness/runtime` · `skill/library` · `contract/verifier` · `policy/data` · `objective/reward` · `memory/context`. Digital, transient, and narrower-layer precedents are collected in [Extended Reading](extended-reading.md#self-evolving-embodied-agents).
+
+- \[2026.8] **Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence** [paper](https://arxiv.org/abs/2608.16590) [project](https://air-embodied-brain.github.io/zetta/) [code](https://github.com/air-embodied-brain/Zetta-Embodiment) — **Harness/runtime.** Freezes a base VLA and high-level orchestrator while evolving runtime critics, recovery playbooks, and schema-constrained tools through failure diagnosis, replay, regression gates, and held-out promotion.
+- \[2026.8] **Self-Evolving Embodied Agents via Skill-Harness Evolution** [paper](https://arxiv.org/abs/2608.11350) — **Skill + harness.** Evolves reusable textual skills and a context-code harness around frozen planner and executor models using episode-level feedback, beam search, sandboxed candidates, and top-k validation.
+- \[2026.6] **ASPIRE: Agentic /Skills Discovery for Robotics** [paper](https://arxiv.org/abs/2607.00272) [project](https://research.nvidia.com/labs/gear/aspire/) [code](https://github.com/NVlabs/ASPIRE) — **Skill/library.** Diagnoses robot-program failures from execution traces, synthesizes repairs, and consolidates validated programs into reusable skills through iterative agentic exploration.
+- \[2026.6] **ENPIRE: Agentic Robot Policy Self-Improvement in the Real World** [paper](https://arxiv.org/abs/2606.19980) — **Policy/training code.** Runs a coding-agent loop on real robots that edits policy-improvement algorithms, rewards, training infrastructure, and evaluation code from rollout evidence.
+- \[2026.6] **VASO: Formally Verifiable Self-Evolving Skills for Physical AI Agents** [paper](https://arxiv.org/abs/2606.05395) [project](https://languagegroundedriskdetection.github.io/ProjectPage/vaso-webpage/) — **Contract/verifier.** Refines embodied skill contracts against temporal specifications and model-checking counterexamples, connecting self-evolving skills to formal verification and physical safety constraints.
+- \[2026.5] **EmbodiSkill: Skill-Aware Reflection for Self-Evolving Embodied Agents** [paper](https://arxiv.org/abs/2605.10332) — **Skill/context.** Maintains persistent textual skills and classifies reflections as discovery, optimization, skill defects, or execution lapses before targeted consolidation edits.
+- \[2026.5] **Learning While Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot Policies** [paper](https://arxiv.org/abs/2605.00416) — **Policy/data (human-assisted).** Closes an offline-to-online fleet loop in which shared autonomous rollouts and human interventions update a generalist VLA policy across sixteen real robots.
+- \[2026.3] **Uni-Skill: Building Self-Evolving Skill Repository for Generalizable Robotic Manipulation** [paper](https://arxiv.org/abs/2603.02623) — **Skill/library.** Builds a reusable skill repository that retrieves, adapts, and consolidates manipulation capabilities from experience, making skill-library growth an explicit learning target.
+- \[2026.2] **RISE: Self-Improving Robot Policy with Compositional World Model** [paper](https://arxiv.org/abs/2602.11075) [project](https://opendrivelab.com/RISE/) — **Policy/data.** Uses a compositional world model and progress-aware value estimates to generate improvement data and update robot policies through imagined and real trajectories.
+- \[2024.5] **Agentic Skill Discovery** [paper](https://arxiv.org/abs/2405.15019) [project](https://agentic-skill-discovery.github.io/) — **Skill/objective (simulation).** Combines language-model task and reward generation, reinforcement learning, and independent visual verification to discover robot skills and add them to a persistent library.
+- \[2023.10] **Eureka: Human-Level Reward Design via Coding Large Language Models** [paper](https://arxiv.org/abs/2310.12931) [project](https://eureka-research.github.io/) — **Objective/reward (simulation).** Searches executable reward programs with language-model proposals and simulator feedback, showing objective-level self-improvement for robot skill policies.
+- \[2023.6] **RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation** [paper](https://arxiv.org/abs/2306.11706) — **Policy/data.** Combines demonstrations with autonomous rollouts to collect data on new tasks and fine-tune a generalist manipulation policy, establishing an early real-robot example of continual policy self-improvement.
 
 ## Embodied Memory
 
@@ -216,7 +250,6 @@ Agentic robotics is a continuum rather than a binary label. Not every work in th
 
 - \[2026.6] **CLASP: Language-Driven Robot Skill Selection and Composition using Task-Parameterized Learning** [paper](https://arxiv.org/abs/2606.08169) — Uses language to select and compose task-parameterized robot skills, supporting adaptable execution beyond fixed primitive sequences and object configurations.
 - \[2026.3] **CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation** [paper](https://arxiv.org/abs/2603.22435) — Benchmarks code-generating agents on robot manipulation and provides a framework for improving executable programs through environment feedback and iterative repair.
-- \[2026.3] **Uni-Skill: Building Self-Evolving Skill Repository for Generalizable Robotic Manipulation** [paper](https://arxiv.org/abs/2603.02623) — Builds a reusable skill repository that expands from experience, allowing manipulation agents to retrieve, adapt, and consolidate capabilities.
 - \[2025.5] **Dynamic Robot Tool Use with Vision Language Models** [paper](https://arxiv.org/abs/2505.01399) — Uses vision-language reasoning to select, localize, and operate previously unseen physical tools under changing task requirements and scene conditions.
 - \[2025.5] **DeCo: Task Decomposition and Skill Composition for Zero-Shot Generalization in Long-Horizon 3D Manipulation** [paper](https://arxiv.org/abs/2505.00527) [project](https://deco226.github.io/) — Decomposes language goals and composes learned 3D manipulation skills, enabling zero-shot generalization to new long-horizon task combinations and environments.
 - \[2025.5] **RAI: Flexible Agent Framework for Embodied AI** [paper](https://arxiv.org/abs/2505.07532) [code](https://github.com/RobotecAI/rai) — Provides a modular agent framework that connects language reasoning with ROS tools, robot skills, logging, and execution feedback.

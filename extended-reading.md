@@ -10,6 +10,27 @@ This archive preserves papers and resources moved out of the main README during 
 - \[2026.4] Vision-and-Language Navigation for UAVs: A Survey of Progress, Challenges and a Research Roadmap [paper](https://arxiv.org/abs/2604.13614)
 - \[2025.8] Agentic LLM-based robotic systems for real-world applications [paper](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1605405/full)
 
+## Self-Evolving Embodied Agents
+
+These adjacent works study self-evolution at narrower layers or provide useful digital and systems precedents for the main-list entries. The main list's layer key applies here as well.
+
+**Layer key.** `skill/library` · `policy/data` · `harness/scaffold` · `memory/context` · `objective/verifier`. Digital-world and transient adaptations are identified in the descriptions.
+
+- \[2026.8] You Don't Need To Stay in The Loop: An Agentic Robotics Loop for Robot-Policy Improvement [paper](https://arxiv.org/abs/2608.07555) — Applies coding-agent controller/worker patterns, evidence gates, and recoverable transactions to robot-policy improvement, emphasizing auditable orchestration rather than autonomous checkpoint selection.
+- \[2026.7] RoboTTT: Context Scaling for Robot Policies [paper](https://arxiv.org/abs/2607.15275) [project](https://research.nvidia.com/labs/gear/robottt/) — Uses test-time training and fast weights to compress long visuomotor histories, enabling on-the-fly policy adaptation without persistent harness or skill-library updates.
+- \[2026.6] Playful Agentic Robot Learning [paper](https://arxiv.org/abs/2606.19419) — Uses autonomous play to generate tasks, collect trials, verify outcomes, and distill robot-code policies into a persistent skill library before evaluation.
+- \[2026.6] Recover, Discover, Plan: Learning Skills and Concepts from Robot Failures [paper](https://arxiv.org/abs/2606.18328) — Learns reusable skills and concepts from robot failures by linking recovery, discovery, and planning into a failure-to-capability pathway.
+- \[2026.5] SkillOpt: Executive Strategy for Self-Evolving Agent Skills [paper](https://arxiv.org/abs/2605.23904) — Optimizes executable agent skills with bounded edits and held-out acceptance, providing a digital program-level template for embodied skill evolution.
+- \[2026.4] Evolvable Embodied Agent for Robotic Manipulation via Long Short-Term Reflection and Optimization [paper](https://arxiv.org/abs/2604.13533) — Updates short- and long-term prompts from visual and action consistency signals while keeping the foundation model and action library fixed; a memory/context-level precursor.
+- \[2026.2] AutoHarness: improving LLM agents by automatically synthesizing a code harness [paper](https://arxiv.org/abs/2603.03329) — Synthesizes a persistent code harness from environment feedback to filter illegal actions, offering a direct but text-game-only precedent for embodied runtime governance.
+- \[2026.2] Self-Supervised Bootstrapping of Action-Predictive Embodied Reasoning [paper](https://arxiv.org/abs/2602.08167) — Refines embodiment-specific reasoning from action-predictive evidence and distills it into training data across multiple robot forms, without external rewards or human annotation.
+- \[2025.6] SEEA-R1: Tree-Structured Reinforcement Fine-Tuning for Self-Evolving Embodied Agents [paper](https://arxiv.org/abs/2506.21669) — Uses tree-structured policy optimization and a multimodal generative reward model to improve embodied reasoning under sparse, delayed feedback.
+- \[2025.5] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents [paper](https://arxiv.org/abs/2505.22954) [code](https://github.com/jennyzzt/dgm) — Mutates and evaluates agent source code in an archive of candidate systems, demonstrating open-ended scaffold evolution with sandboxed coding benchmarks.
+- \[2025.4] SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills [paper](https://arxiv.org/abs/2504.07079) — Discovers, practices, and distills reusable API skills for web agents, providing a digital precedent for embodied skill libraries and cross-agent transfer.
+- \[2025.2] EvoFlow: Evolving Diverse Agentic Workflows On The Fly [paper](https://arxiv.org/abs/2502.07373) — Evolves a diverse population of agent workflows through retrieval, crossover, mutation, and niching, suggesting a population-based route to embodied harness search.
+- \[2024.8] Automated Design of Agentic Systems [paper](https://arxiv.org/abs/2408.08435) [project](https://shengranhu.com/ADAS) — Uses meta-agent programming to search executable agent designs, including prompts, tools, and workflows, establishing a general scaffold-evolution formulation.
+- \[2023.5] Voyager: An Open-Ended Embodied Agent with Large Language Models [paper](https://arxiv.org/abs/2305.16291) — Automatically discovers, debugs, and stores executable code skills in Minecraft; a digital-world antecedent for persistent skill-library evolution rather than a physical-robot result.
+
 ## Agentic Robotics Architectures
 
 - \[2026.6] Agentic Neuro-Symbolic Planning and Commissioning for Human-in-the-Loop Industrial Robotics with Digital Twins [paper](https://arxiv.org/abs/2606.08214)
@@ -72,7 +93,6 @@ This archive preserves papers and resources moved out of the main README during 
 
 ## Verification and Self-Evaluation
 
-- \[2026.6] VASO: Formally Verifiable Self-Evolving Skills for Physical AI Agents [paper](https://arxiv.org/abs/2606.05395)
 - \[2026.5] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation [paper](https://arxiv.org/abs/2605.12386)
 - \[2026.3] Action Draft and Verify: A Self-Verifying Framework for Vision-Language-Action Model [paper](https://arxiv.org/abs/2603.18091)
 - \[2026.2] Metamorphic Testing of Vision-Language Action-Enabled Robots [paper](https://arxiv.org/abs/2602.22579)
