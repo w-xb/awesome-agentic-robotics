@@ -20,6 +20,20 @@ jobs:
           fetch-depth: 0
       - name: Apply README transformation
         run: python3 scripts/apply_readme_overhaul.py
+      - name: Fix merged foundations ordering
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('README.md')
+          lines = p.read_text(encoding='utf-8').splitlines()
+          gi = next(i for i,l in enumerate(lines) if 'Gemini Robotics: Bringing AI into the Physical World' in l)
+          oi = next(i for i,l in enumerate(lines) if 'Octo: An Open-Source Generalist Robot Policy' in l)
+          if gi > oi:
+              gemini = lines.pop(gi)
+              oi = next(i for i,l in enumerate(lines) if 'Octo: An Open-Source Generalist Robot Policy' in l)
+              lines.insert(oi, gemini)
+          p.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          PY
       - name: Validate repository
         run: python3 scripts/validate_list.py
       - name: Commit generated README and remove temporary generator
