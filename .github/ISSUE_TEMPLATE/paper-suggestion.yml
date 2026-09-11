@@ -1,0 +1,90 @@
+name: Paper or resource suggestion
+description: Suggest a paper, system, benchmark, dataset, or open-source resource for curation.
+title: "[Suggestion] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Please explain the agentic contribution rather than pasting the abstract.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: Exact paper or resource title
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Official paper or resource URL
+      placeholder: https://arxiv.org/abs/...
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Proposed canonical section
+      options:
+        - Surveys and Position Papers
+        - Agentic Robotics Architectures
+        - Agentic VLA and Embodied Foundation Models
+        - Self-Evolving Embodied Agents
+        - Embodied Memory
+        - Planning and Reasoning
+        - World Models and World-Action Models
+        - Verification and Safety Evaluation
+        - Failure Detection and Recovery
+        - Skill Learning and Tool Use
+        - Long-Horizon Manipulation
+        - Embodied Navigation
+        - Human-Robot Interaction
+        - Governance and Physical Safety
+        - Benchmarks and Datasets
+        - Foundations and Industrial Systems
+        - Extended Reading / unsure
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Agentic contribution
+      description: What changes about planning, memory, tools, verification, recovery, adaptation, safety, or physical execution?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and significance
+      description: Real-robot evidence, benchmark results, adoption, foundational role, or other reasons this is a strong representative work.
+    validations:
+      required: true
+  - type: input
+    id: resources
+    attributes:
+      label: Official project / code / model / dataset links
+      description: Optional. Separate multiple links with spaces.
+  - type: dropdown
+    id: evolution
+    attributes:
+      label: If self-evolving, what persists across episodes?
+      options:
+        - Not a self-evolving work
+        - harness/runtime
+        - skill/library
+        - contract/verifier
+        - policy/data
+        - objective/reward
+        - memory/context
+        - Other / unsure
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched both README files for the title and paper identifier.
+          required: true
+        - label: The links above are official author or publisher resources.
+          required: true
