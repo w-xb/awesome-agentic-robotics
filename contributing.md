@@ -1,6 +1,14 @@
 # Contributing
 
-Thanks for helping improve Awesome Agentic Robotics. The main README is a selective, evolving list of high-signal work; broader but relevant work belongs in [extended-reading.md](extended-reading.md).
+Thanks for helping improve Awesome Agentic Robotics. The main README is a selective, evolving map of high-signal work; broader, narrower, or less established work belongs in [extended-reading.md](extended-reading.md).
+
+## Before You Submit
+
+- Search both `README.md` and `extended-reading.md` for the title, arXiv identifier, and common short name.
+- Prefer one paper or resource per pull request so placement and evidence can be reviewed independently.
+- Use the paper-suggestion issue template if you want feedback on fit before preparing a pull request.
+- Use official publication, project, code, model, and dataset links only.
+- Keep descriptions neutral and contribution-focused rather than promotional.
 
 ## Scope
 
@@ -18,6 +26,14 @@ Submissions should materially advance at least one capability of physical agency
 
 General VLA work is not included solely because it improves accuracy, speed, or scale. It must clearly improve closed-loop autonomy, long-horizon execution, tool use, verification, recovery, memory, world-model-based decisions, continual adaptation, or cross-embodiment deployment.
 
+## Placement Rule
+
+Each work has one canonical entry in the main README. Place it according to the component or capability it changes most directly, not every mechanism it happens to use.
+
+A paper may use memory, planning, and verification simultaneously; if its distinctive contribution is a recovery supervisor, its canonical home is **Failure Detection and Recovery**. Mention secondary capabilities in the description instead of duplicating the entry.
+
+For self-evolving work, distinguish **persistent updates that affect future episodes** from transient replanning, retrying, test-time adaptation, or fixed-library retrieval. Use the closest primary target: `harness/runtime`, `skill/library`, `contract/verifier`, `policy/data`, `objective/reward`, or `memory/context`.
+
 ## Selection Rubric
 
 Maintainers score candidates on a ten-point rubric:
@@ -30,38 +46,41 @@ Maintainers score candidates on a ten-point rubric:
 | Representativeness | 0–2 | The work is a clear reference for an important idea and is not redundant with a stronger paper already listed. |
 | Resource completeness | 0–1 | Official code, models, datasets, or a well-maintained project page make the work easier to reproduce and use. |
 
-Main-list candidates normally score at least 7/10 and at least 2/3 for agentic relevance. The list may grow as important work appears, but additions must clear the same quality bar and offer a distinct contribution beyond existing entries. Relevant, narrower, or less established candidates may be added to Extended Reading.
+Main-list candidates normally score at least **7/10** and at least **2/3** for agentic relevance. The list may grow as important work appears, but additions must clear the same quality bar and offer a distinct contribution beyond existing entries. Relevant, narrower, or less established candidates may be added to Extended Reading.
 
 ## Entry Format
 
-Use the first public release month, normally the first arXiv submission date, and add a neutral 18–35 word contribution summary:
+Use the first public release month, normally the first arXiv submission or public project release, and add a neutral 18–35 word contribution summary:
 
 ```md
-- \[YYYY.M] Title [paper](https://example.com) [project](https://example.com) [code](https://example.com) — Concise, neutral description of the work's distinctive contribution to physical agency.
+- [YYYY.M · Title](https://paper.example) - Concise, neutral description of the work's distinctive contribution to physical agency. Resources: [Project](https://project.example) · [Code](https://code.example).
 ```
 
-Use link labels consistently:
+The title should link to the official publication or preprint. Use supplementary link labels consistently:
 
-- `[paper]` for the official publication or preprint
-- `[project]` for the authors' project page
-- `[code]` for the official implementation
-- `[model]` for official model weights
-- `[dataset]` for official data
+- `[Project]` for the authors' project page
+- `[Code]` for the official implementation
+- `[Model]` for official model weights
+- `[Dataset]` for official data
 
-Only add links explicitly provided by the authors or publishing organization. Each paper has one canonical entry and must not be duplicated across topic sections. Must Read descriptions are maintained by the repository curators and use 30–50 words.
+Only add links explicitly provided by the authors or publishing organization. Keep entries sorted newest first within their canonical section.
 
-For self-evolving work, state the primary evolution target and distinguish persistent updates across episodes from transient replanning or fixed-library retrieval.
+The **Start Here / Must Read** routes are intentionally maintainer-curated. A paper can be accepted to the main list without being added to Must Read. Changes to the taxonomy or top-level categories should be proposed separately from ordinary paper additions.
 
 ## Pull Request Checklist
 
 Before opening a pull request:
 
-- explain the paper's agentic contribution and rubric score
-- explain why the work merits canonical main-list placement rather than Extended Reading
-- verify the exact title, first-public-release month, and arXiv identifier
+- use a title such as `Add <paper or system name>`
+- explain the work's agentic contribution and estimated rubric score
+- explain why it merits main-list placement rather than Extended Reading
+- identify the proposed canonical section and any secondary capabilities
+- verify the exact title, first-public-release month, and paper identifier
 - confirm every project, code, model, and dataset link is official
-- search both README files for duplicate titles and identifiers
-- classify self-evolving entries by their primary target (skill, harness, verifier, memory, policy, objective, data, or interface)
+- search both Markdown files for duplicate titles and identifiers
+- classify self-evolving entries by their primary persistent update target
 - keep entries sorted newest first within their canonical section
-- run `npx awesome-lint README.md`
-- confirm the main README remains selective and contains no duplicate canonical entries
+- run `python3 scripts/validate_list.py` and `npx awesome-lint` from the repository root
+- avoid unrelated formatting or taxonomy changes in the same pull request
+
+Thank you for helping keep the list selective, useful, and easy to navigate.
