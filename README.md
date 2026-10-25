@@ -358,6 +358,7 @@ Papers moved out of the main list during the 2026-08-27 curation pass remain ava
 - [Awesome Memory for Robotics](https://github.com/Everloom-129/Awesome-Memory-for-Robotics)
 - [Awesome World Models](https://github.com/leofan90/Awesome-World-Models)
 - [Awesome Embodied VLA / VA / VLN](https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln)
+- [DoomPay](https://github.com/doomsday-network/doom-pay) - 2-line Stripe-style non-custodial Web3 checkout widget (`pay.js`), HTTP 402 payment wall, and MCP tool server for verifying Layer-1 `DOOM` and Base Mainnet `wDOOM` payments.
 
 ## Citation
 
