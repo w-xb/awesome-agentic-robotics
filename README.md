@@ -323,6 +323,7 @@ This stack is a research lens rather than a claim that every system must use the
 
 > Governance constraints, policy-compliant execution, consent and delegation, runtime guardrails, physical irreversibility, and mechanisms for keeping autonomous behavior within acceptable boundaries.
 
+- [2026.11 · LEASH: Stay Safe in Agentic Robotics](https://arxiv.org/abs/2611.14115) - Introduces RoboRisk, 92 simulated and 13 real-robot safety tasks for foundation-model planners, and LEASH, runtime task, action and commit gates that check each decision against live camera views before the robot acts.
 - [2026.5 · Consent Chain Degradation in Embodied Multi-Agent Systems](https://arxiv.org/html/2605.16300v1) - Studies how consent constraints weaken across delegated multi-agent execution, exposing governance risks unique to embodied action chains and delegation structures.
 - [2026.4 · EmbodiedGovBench: A Benchmark for Governance-Constrained Embodied Agents](https://arxiv.org/html/2604.11174v1) - Evaluates whether embodied agents follow governance policies while pursuing tasks, separating rule compliance from conventional completion metrics or isolated benchmarks.
 - [2026.4 · Harnessing Embodied Agents: Runtime Governance for Policy-Constrained Execution](https://arxiv.org/abs/2604.07833) - Introduces runtime governance mechanisms that monitor and constrain agent actions against explicit policies during physical execution with minimal latency.
